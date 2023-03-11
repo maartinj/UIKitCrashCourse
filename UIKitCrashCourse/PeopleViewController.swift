@@ -20,6 +20,7 @@ class PeopleViewController: UIViewController {
         
         let btn = UIButton(configuration: config)
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(didTapSubscribe), for: .touchUpInside)
         return btn
     }()
 
@@ -42,5 +43,9 @@ private extension PeopleViewController {
             subscribeBtn.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             subscribeBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    @objc func didTapSubscribe(sender: UIButton) {
+        print("I'm subscribing")
     }
 }
