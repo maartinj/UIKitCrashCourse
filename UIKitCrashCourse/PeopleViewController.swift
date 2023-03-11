@@ -27,6 +27,7 @@ class PeopleViewController: UIViewController {
     private lazy var personContainerVw: UIView = {
         
         let vw = UIView()
+        vw.layer.cornerRadius = 10
         vw.backgroundColor = UIColor.gray.withAlphaComponent(0.1)
         vw.translatesAutoresizingMaskIntoConstraints = false
         return vw
