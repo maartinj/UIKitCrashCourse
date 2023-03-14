@@ -5,7 +5,7 @@
 //  Created by Marcin Jędrzejak on 10/03/2023.
 //
 
-// Film 1:10:30
+// Film 1:22:18
 
 import UIKit
 
@@ -17,6 +17,7 @@ class PeopleViewController: UIViewController {
         layout.itemSize = .init(width: UIScreen.main.bounds.width, height: 130)
         
         let vw = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        vw.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: "PersonCollectionViewCell")
         vw.translatesAutoresizingMaskIntoConstraints = false
         return vw
         

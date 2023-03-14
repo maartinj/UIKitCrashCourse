@@ -15,6 +15,7 @@
 		E4A7B8E729BD965F00E1F24C /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8E629BD965F00E1F24C /* PersonView.swift */; };
 		E4A7B8E929BFFB3B00E1F24C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8E829BFFB3B00E1F24C /* Model.swift */; };
 		E4A7B8EB29BFFCC500E1F24C /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8EA29BFFCC500E1F24C /* PeopleViewModel.swift */; };
+		E4A7B8ED29C1358200E1F24C /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8EC29C1358200E1F24C /* PersonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E4A7B8E629BD965F00E1F24C /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		E4A7B8E829BFFB3B00E1F24C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E4A7B8EA29BFFCC500E1F24C /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		E4A7B8EC29C1358200E1F24C /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		E46D0E5029BBC25200791A54 /* UIKitCrashCourse */ = {
 			isa = PBXGroup;
 			children = (
+				E4A7B8EC29C1358200E1F24C /* PersonCollectionViewCell.swift */,
 				E46D0E5129BBC25200791A54 /* AppDelegate.swift */,
 				E46D0E5329BBC25200791A54 /* SceneDelegate.swift */,
 				E46D0E5529BBC25200791A54 /* PeopleViewController.swift */,
@@ -148,6 +151,7 @@
 				E46D0E5629BBC25200791A54 /* PeopleViewController.swift in Sources */,
 				E4A7B8E729BD965F00E1F24C /* PersonView.swift in Sources */,
 				E46D0E5229BBC25200791A54 /* AppDelegate.swift in Sources */,
+				E4A7B8ED29C1358200E1F24C /* PersonCollectionViewCell.swift in Sources */,
 				E46D0E5429BBC25200791A54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
