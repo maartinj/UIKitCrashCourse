@@ -14,6 +14,7 @@
 		E46D0E5E29BBC25300791A54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46D0E5C29BBC25300791A54 /* LaunchScreen.storyboard */; };
 		E4A7B8E729BD965F00E1F24C /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8E629BD965F00E1F24C /* PersonView.swift */; };
 		E4A7B8E929BFFB3B00E1F24C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8E829BFFB3B00E1F24C /* Model.swift */; };
+		E4A7B8EB29BFFCC500E1F24C /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7B8EA29BFFCC500E1F24C /* PeopleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E46D0E5F29BBC25300791A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A7B8E629BD965F00E1F24C /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		E4A7B8E829BFFB3B00E1F24C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E4A7B8EA29BFFCC500E1F24C /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E46D0E5329BBC25200791A54 /* SceneDelegate.swift */,
 				E46D0E5529BBC25200791A54 /* PeopleViewController.swift */,
 				E4A7B8E829BFFB3B00E1F24C /* Model.swift */,
+				E4A7B8EA29BFFCC500E1F24C /* PeopleViewModel.swift */,
 				E4A7B8E629BD965F00E1F24C /* PersonView.swift */,
 				E46D0E5A29BBC25300791A54 /* Assets.xcassets */,
 				E46D0E5C29BBC25300791A54 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A7B8E929BFFB3B00E1F24C /* Model.swift in Sources */,
+				E4A7B8EB29BFFCC500E1F24C /* PeopleViewModel.swift in Sources */,
 				E46D0E5629BBC25200791A54 /* PeopleViewController.swift in Sources */,
 				E4A7B8E729BD965F00E1F24C /* PersonView.swift in Sources */,
 				E46D0E5229BBC25200791A54 /* AppDelegate.swift in Sources */,
