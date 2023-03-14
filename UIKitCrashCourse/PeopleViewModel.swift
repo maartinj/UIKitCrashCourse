@@ -23,7 +23,9 @@ class PeopleViewModel {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 self?.people = try jsonDecoder.decode(UsersResponse.self, from: data).data
+                
             } catch {
+                
                 print(error)
             }
         }

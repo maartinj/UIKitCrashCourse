@@ -5,16 +5,21 @@
 //  Created by Marcin Jędrzejak on 10/03/2023.
 //
 
+// Film 1:10:30
+
 import UIKit
 
 class PeopleViewController: UIViewController {
     
-    private lazy var personVw: PersonView = {
+    private lazy var cv: UICollectionView = {
         
-        let vw = PersonView { [weak self] in
-            self?.sayHello()
-        }
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = .init(width: UIScreen.main.bounds.width, height: 130)
+        
+        let vw = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        vw.translatesAutoresizingMaskIntoConstraints = false
         return vw
+        
     }()
 
     override func viewDidLoad() {
@@ -30,16 +35,14 @@ private extension PeopleViewController {
         
         self.view.backgroundColor = .white
         
-        self.view.addSubview(personVw)
+        self.view.addSubview(cv)
         
         NSLayoutConstraint.activate([
-            personVw.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            personVw.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            personVw.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
+            
+            cv.topAnchor.constraint(equalTo: view.topAnchor),
+            cv.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            cv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            cv.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-    }
-    
-    func sayHello() {
-        print("Hiya")
     }
 }
