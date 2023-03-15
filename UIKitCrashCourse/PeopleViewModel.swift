@@ -7,9 +7,16 @@
 
 import Foundation
 
+protocol PeopleViewModelDelegate: AnyObject {
+    func didFinish()
+    func didFail(error: Error)
+}
+
 class PeopleViewModel {
     
     private(set) var people = [PersonResponse]()
+    
+    weak var delegate: PeopleViewModelDelegate?
     
     func getUsers() {
         
@@ -23,10 +30,11 @@ class PeopleViewModel {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 self?.people = try jsonDecoder.decode(UsersResponse.self, from: data).data
+                self?.delegate?.didFinish()
                 
             } catch {
                 
-                print(error)
+                self?.delegate?.didFail(error: error)
             }
         }
     }

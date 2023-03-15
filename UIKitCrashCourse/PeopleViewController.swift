@@ -30,6 +30,7 @@ class PeopleViewController: UIViewController {
         super.viewDidLoad()
         print("Ya boys in mem!")
         setup()
+        vm.delegate = self
         vm.getUsers()
     }
 }
@@ -44,6 +45,16 @@ extension PeopleViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCollectionViewCell",
                                                       for: indexPath) as! PersonCollectionViewCell
         return cell
+    }
+}
+
+extension PeopleViewController: PeopleViewModelDelegate {
+    func didFinish() {
+        cv.reloadData()
+    }
+    
+    func didFail(error: Error) {
+        print(error)
     }
     
     
