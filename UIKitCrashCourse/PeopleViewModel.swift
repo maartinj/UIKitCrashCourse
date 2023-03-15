@@ -9,7 +9,7 @@ import Foundation
 
 class PeopleViewModel {
     
-    private var people = [PersonResponse]()
+    private(set) var people = [PersonResponse]()
     
     func getUsers() {
         

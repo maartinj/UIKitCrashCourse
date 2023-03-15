@@ -11,6 +11,8 @@ import UIKit
 
 class PeopleViewController: UIViewController {
     
+    private let vm = PeopleViewModel()
+    
     private lazy var cv: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
@@ -18,6 +20,7 @@ class PeopleViewController: UIViewController {
         
         let vw = UICollectionView(frame: .zero, collectionViewLayout: layout)
         vw.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: "PersonCollectionViewCell")
+        vw.dataSource = self
         vw.translatesAutoresizingMaskIntoConstraints = false
         return vw
         
@@ -27,7 +30,23 @@ class PeopleViewController: UIViewController {
         super.viewDidLoad()
         print("Ya boys in mem!")
         setup()
+        vm.getUsers()
     }
+}
+
+extension PeopleViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        vm.people.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCollectionViewCell",
+                                                      for: indexPath) as! PersonCollectionViewCell
+        return cell
+    }
+    
+    
 }
 
 private extension PeopleViewController {
