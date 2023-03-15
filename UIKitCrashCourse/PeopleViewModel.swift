@@ -18,6 +18,7 @@ class PeopleViewModel {
     
     weak var delegate: PeopleViewModelDelegate?
     
+    @MainActor
     func getUsers() {
         
         Task { [weak self] in
