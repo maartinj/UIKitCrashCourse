@@ -78,6 +78,9 @@ private extension PeopleViewController {
     
     func setup() {
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "People"
+        
         self.view.backgroundColor = .white
         
         self.view.addSubview(cv)
