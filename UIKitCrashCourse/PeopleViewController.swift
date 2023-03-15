@@ -8,6 +8,7 @@
 // Film 1:22:18
 
 import UIKit
+import SafariServices
 
 class PeopleViewController: UIViewController {
     
@@ -45,12 +46,14 @@ extension PeopleViewController: UICollectionViewDataSource {
         let item = vm.people[indexPath.item]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCollectionViewCell",
                                                       for: indexPath) as! PersonCollectionViewCell
+        cell.delegate = self
         cell.item = item
         return cell
     }
 }
 
 extension PeopleViewController: PeopleViewModelDelegate {
+    
     func didFinish() {
         cv.reloadData()
     }
@@ -58,8 +61,17 @@ extension PeopleViewController: PeopleViewModelDelegate {
     func didFail(error: Error) {
         print(error)
     }
+}
+
+extension PeopleViewController: PersonCollectionViewCellDelegate {
     
-    
+    func didTapSubscribe() {
+        
+        let url = URL(string: "http://www.youtube.com/@tundsdev")!
+        let vc = SFSafariViewController(url: url)
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
+    }
 }
 
 private extension PeopleViewController {
